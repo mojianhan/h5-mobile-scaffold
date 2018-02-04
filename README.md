@@ -1,2 +1,1 @@
-# h5-mobile-scaffold
-h5 移动开发框架
+# h5 移动端开发框架
