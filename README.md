@@ -4,13 +4,21 @@
 
 ## 目录结构
 ```
-├── images
-|   └── gotenks.png
-├── scripts
-|   └── index.js
-├── stylesheets
-|   ├── global.css
-|   └── index.css
-├── favicon.ico
-└── index.html
+├── src
+|   ├── images
+|   |   └── gotenks.png
+|   ├── scripts
+|   |   └── index.js
+|   ├── stylesheets
+|   |   ├── global.css
+|   |   └── index.css
+|   ├── favicon.ico
+|   └── index.html
+├── .editorconfig
+├── .gitignore
+├── .npmrc
+├── .tplconfig.js
+├── gulpfile.js
+├── LICENSE
+└── README.md
 ```

@@ -1,0 +1,31 @@
+{
+  "name": "h5-mobile-scaffold",
+  "version": "1.0.0",
+  "description": "这是一个简单、实用、基础的 H5 移动端开发脚手架。",
+  "scripts": {
+    "build": "rimraf ./dist && gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cntanglijun/h5-mobile-scaffold.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cntanglijun/h5-mobile-scaffold/issues"
+  },
+  "homepage": "https://github.com/cntanglijun/h5-mobile-scaffold#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-cli": "^2.0.1",
+    "gulp-html": "^0.4.7",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0",
+    "rimraf": "^2.6.2"
+  }
+}
