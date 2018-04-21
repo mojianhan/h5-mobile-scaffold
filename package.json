@@ -19,7 +19,11 @@
   },
   "homepage": "https://github.com/cntanglijun/h5-mobile-scaffold#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-amd": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "browser-sync": "^2.23.7",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.9.3",
     "gulp-cli": "^2.0.1",

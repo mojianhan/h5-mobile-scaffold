@@ -1,4 +1,5 @@
 const { join, resolve, extname } = require('path')
+const babel = require('babel-core')
 const fs = require('fs')
 const gulp = require('gulp')
 const bs = require('browser-sync')
@@ -8,9 +9,10 @@ gulp.task('server', () => {
   const rootDir = resolve(__dirname, '..', config.srcRoot)
 
   bs.init({
-    server: rootDir,
+    serveStatic: [ rootDir ],
+    proxy: 'http://127.0.0.1:3333',
     open: false,
-    port: 8888,
+    port: 8686,
     files: [ resolve(rootDir, '**/*') ],
     middleware: [
       (req, res, next) => {
@@ -18,27 +20,16 @@ gulp.task('server', () => {
         const reqFile = join(rootDir, myExtname ? req.url : 'index.html')
 
         let content = ''
+        let option = {}
 
         switch (myExtname) {
-          case '':
-          case 'html':
-            res.setHeader('Content-Type', 'text/html')
-            content = fs.readFileSync(reqFile)
-            break
-
-          case 'css':
-            res.setHeader('Content-Type', 'text/css')
-            content = fs.readFileSync(reqFile)
-            break
-
           case 'js':
             res.setHeader('Content-Type', 'application/javascript')
-            content = fs.readFileSync(reqFile)
+            option = { sourceMaps: 'inline' }
+            content = babel.transformFileSync(reqFile.replace('js', config.jsExtname), option).code
             break
 
-          default:
-            content = fs.readFileSync(reqFile)
-            break
+          // no default
         }
 
         res.end(content)

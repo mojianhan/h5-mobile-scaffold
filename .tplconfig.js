@@ -1,4 +1,5 @@
 module.exports = {
   srcRoot: 'src',
-  distRoot: 'dist'
+  distRoot: 'dist',
+  jsExtname: 'es'
 }
