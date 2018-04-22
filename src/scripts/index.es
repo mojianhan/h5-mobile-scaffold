@@ -1,3 +1,6 @@
-import ajax from './ajax'
+import $ from 'jquery'
+import getData from './getData'
 
-ajax()
+console.log($().jquery)
+
+getData({ url: 'https://api.bootcdn.cn/names.min.json' })

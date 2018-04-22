@@ -39,8 +39,32 @@ function formatParam(data) {
   return s.join('&')
 }
 
-function ajax({ url = '', method = 'GET', data = {} } = {}) {
+function isFormData(object) {
+  return Object.prototype.toString.call(object) === '[object FormData]'
+}
 
+function ajax({ url = '', method = 'GET', data = {} } = {}) {
+  return new Promise((resolve, reject) => {
+    if (method === 'POST') {
+      if (!isFormData(data)) {
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+      }
+    }
+
+    xhr.open(method, url)
+
+    xhr.onreadystatechange = () => {
+      if(xhr.readyState === 4 && xhr.status === 200) {
+        if (xhr.status === 200) {
+          resolve(JSON.parse(xhr.responseText))
+        } else {
+          reject(xhr)
+        }
+      }
+    }
+
+    xhr.send(formatParam(data))
+  })
 }
 
 export default ajax
