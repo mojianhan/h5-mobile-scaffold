@@ -5,17 +5,7 @@
 require.config({
   baseUrl: './scripts',
   paths: {
-
-    // http://jquery.com/
-    jquery: '//cdn.bootcss.com/jquery/1.12.1/jquery.min',
-
-    // https://lodash.com/
-    lodash: '//cdn.bootcss.com/lodash.js/4.16.4/lodash.min',
-
-    // http://bluebirdjs.com/docs/getting-started.html
-    bluebird: '//cdn.bootcss.com/bluebird/3.3.2/bluebird.min',
-
-    // https://github.com/js-cookie/js-cookie
-    cookie: '//cdn.bootcss.com/js-cookie/2.1.0/js.cookie.min'
+    jquery: 'https://cdn.bootcss.com/jquery/1.12.4/jquery.min',
+    lodash: 'https://cdn.bootcss.com/lodash.js/4.16.4/lodash.min'
   }
 });
