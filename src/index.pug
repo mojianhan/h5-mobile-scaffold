@@ -1,0 +1,19 @@
+extends template/layout
+
+block customer-meta
+  link(href="./stylesheets/index.css" rel="stylesheet")
+
+block customer-content
+  <header>Header</header>
+  <main>
+    <div>
+      <img src="./images/gotenks.png">
+      <h1>Hello World!</h1>
+      <p>H5 移动端开发脚手架</p>
+    </div>
+  </main>
+  <footer>Footer</footer>
+
+block customer-footer
+  script.
+    require(['index'])

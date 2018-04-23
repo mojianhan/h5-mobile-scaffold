@@ -1,5 +1,10 @@
 module.exports = {
   srcRoot: 'src',
   distRoot: 'dist',
-  jsExtname: 'es'
+  jsExtName: 'es',
+  htmlExtName: 'pug',
+  cssExtName: 'styl',
+  ignoreDirs: [
+    'template'
+  ]
 }
