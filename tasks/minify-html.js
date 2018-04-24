@@ -6,9 +6,9 @@ const config = require('../.tplconfig')
 
 gulp.task('minify-html', () => {
   return gulp.src([
-    resolve(__dirname, '..', config.srcRoot, '**/*.' + config.htmlExtName),
+    resolve(__dirname, '..', config.srcRoot, '**/*.' + config.htmlExtName)
   ])
-    .pipe(pug({}))
+    .pipe(pug())
     .pipe(htmlmin({
       collapseWhitespace: true,
       collapseInlineTagWhitespace: true,

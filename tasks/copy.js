@@ -6,7 +6,8 @@ const config = require('../.tplconfig')
 gulp.task('copy', () => {
   return gulp.src([
     resolve(__dirname, '..', config.srcRoot, '**/*.png'),
-    resolve(__dirname, '..', config.srcRoot, '**/*.ico')
+    resolve(__dirname, '..', config.srcRoot, '**/*.ico'),
+    resolve(__dirname, '..', config.srcRoot, '**/config.js')
   ])
     .pipe(imagemin())
     .pipe(gulp.dest(config.distRoot))
